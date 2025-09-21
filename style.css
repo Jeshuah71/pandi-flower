@@ -1,0 +1,101 @@
+:root{
+    --bg: #fffef7;
+    --card: #ffffff;
+    --ink: #1d1d1f;
+    --petal: #ffd84d;
+    --center: #e0a100;
+    --stem: #2e7d32;
+    --leaf: #379b3c;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+  
+  *{box-sizing:border-box}
+  
+  html,body{
+    margin:0;
+    height:100%;
+    background:
+       radial-gradient(1000px 400px at 50% -200px, #fff6c0 0%, transparent 60%),
+       var(--bg);
+    color:var(--ink);
+    font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  
+  main.card{
+    max-width: 720px;
+    margin: clamp(24px, 8vh, 80px) auto;
+    background:var(--card);
+    border-radius: 18px;
+    padding: clamp(16px, 5vw, 32px);
+    box-shadow: var(--shadow);
+  }
+  
+  header{
+    text-align:center;
+    margin-bottom: 8px;
+  }
+  h1{ margin: 0 0 4px; font-weight: 800; letter-spacing: .3px; }
+  .date{ margin:0; opacity:.6; }
+  
+  .flower-wrap{
+    display:grid;
+    place-items:center;
+    padding: 10px 0 4px;
+  }
+  
+  .flower{
+    width:min(440px, 80vw);
+    height:auto;
+    overflow:visible;
+    animation: sway 6s ease-in-out infinite;
+    transform-origin: 100px 170px;
+  }
+  
+  @keyframes sway{
+    0%,100%{ transform: rotate(0deg) }
+    50%{ transform: rotate(2.8deg) }
+  }
+  
+  .petal{
+    fill: var(--petal);
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,.05));
+  }
+  
+  .center{ fill: var(--center) }
+  .stem{ fill: var(--stem) }
+  .leaf{ fill: var(--leaf) }
+  
+  .message{
+    margin: 10px auto 22px;
+    max-width: 58ch;
+    text-align:center;
+    font-size: clamp(1rem, 1.2rem + .2vw, 1.25rem);
+  }
+  
+  .sig{ opacity:.7 }
+  
+  footer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+  
+  button#share{
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 0;
+    font-weight: 700;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+    transition: transform .08s ease, filter .2s ease;
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  }
+  button#share:hover{ transform: translateY(-1px) }
+  button#share:active{ transform: translateY(0) scale(.98) }
+  
+  @media (prefers-reduced-motion: reduce){
+    .flower{ animation: none }
+  }
+  

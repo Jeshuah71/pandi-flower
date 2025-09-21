@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🌼 For Pandi</title>
+  <meta name="description" content="A little yellow flower for you, Pandi."/>
+  <link rel="icon" href="assets/flower.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/flower.svg" as="image" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>🌼 For Pandi</h1>
+      <p class="date"><span id="today"></span></p>
+    </header>
+
+    <section class="flower-wrap" aria-label="animated yellow flower">
+      <!-- SVG Yellow Flower -->
+      <svg class="flower" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+        <title id="title">Yellow Flower</title>
+        <desc id="desc">A simple yellow flower with 8 petals gently swaying.</desc>
+
+        <!-- Stem -->
+        <rect x="97" y="80" width="6" height="90" rx="3" class="stem" />
+
+        <!-- Leaves -->
+        <path d="M100 120 C 70 110, 70 140, 100 135" class="leaf" />
+        <path d="M100 135 C 130 125, 130 155, 100 150" class="leaf" />
+
+        <!-- Petals -->
+        <g class="petals">
+          <ellipse cx="100" cy="80" rx="16" ry="38" transform="rotate(0 100 80)" class="petal"/>
+          <ellipse cx="100" cy="80" rx="16" ry="38" transform="rotate(45 100 80)" class="petal"/>
+          <ellipse cx="100" cy="80" rx="16" ry="38" transform="rotate(90 100 80)" class="petal"/>
+          <ellipse cx="100" cy="80" rx="16" ry="38" transform="rotate(135 100 80)" class="petal"/>
+          <ellipse cx="100" cy="80" rx="16" ry="38" transform="rotate(180 100 80)" class="petal"/>
+          <ellipse cx="100" cy="80" rx="16" ry="38" transform="rotate(225 100 80)" class="petal"/>
+          <ellipse cx="100" cy="80" rx="16" ry="38" transform="rotate(270 100 80)" class="petal"/>
+          <ellipse cx="100" cy="80" rx="16" ry="38" transform="rotate(315 100 80)" class="petal"/>
+        </g>
+
+        <!-- Center -->
+        <circle cx="100" cy="80" r="16" class="center" />
+      </svg>
+    </section>
+
+    <section class="message">
+      <p>Hey Pandi — I can’t be there today, but I’m sending you this little sunshine.</p>
+      <p>Whenever you open this page, the flower sways just for you. 🌼</p>
+      <p class="sig">— from your friend</p>
+    </section>
+
+    <footer>
+      <button id="share">Share this page</button>
+      <p id="share-status" role="status" aria-live="polite"></p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
